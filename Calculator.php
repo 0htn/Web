@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 		else if ((is_numeric($first_num) !== true and  
 		    is_numeric($second_num) !== true) or
-            (is_numeric($first_num) !== true or  
+                    (is_numeric($first_num) !== true or  
 		    is_numeric($second_num) !== true) and 
 			($operator == "+" or $operator == "-" or $operator == "*" 
 			or $operator == "/")) {
