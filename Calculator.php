@@ -35,15 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$calculate = "<h4>...Please fill out the form.</h4>";	
 		}
 		else if (($first_num == "" or $second_num == "") and 
-			($operator == "+" or $operator == "-" or $operator == "*" 
+			($operator == "" or $operator == "+" or $operator == "-" or $operator == "*" 
 			or $operator == "/")) {
-			$calculate = "<h4>$first_number $operator $second_number</h4>";
+			$calculate = "<h4>Please input more than one number.</h4>";
 		}
-		else if ((is_numeric($first_num) !== true and  
-		    is_numeric($second_num) !== true) or
-                    (is_numeric($first_num) !== true or  
-		    is_numeric($second_num) !== true) and 
-			($operator == "+" or $operator == "-" or $operator == "*" 
+		else if ((is_numeric($first_num) !== true or is_numeric($second_num) !== true) or
+			(is_numeric($first_num) !== true and is_numeric($second_num) !== true) and 
+			($operator == "" or $operator == "+" or $operator == "-" or $operator == "*" 
 			or $operator == "/")) {
 			$calculate = "<h4>...Please input only numbers.</h4>";
 		}
